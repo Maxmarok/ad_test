@@ -48,7 +48,7 @@ POST `http://localhost:8000/api/v1/ads/list` - получение списка �
 
 POST `http://localhost:8000/api/v1/ads/item` - получение конкретного объявления (по ID)  
   • `id` - int, required  
-  • `fields` - `true` or `false`  
+  • `fields` - bool `true` or `false`  
 
 POST `http://localhost:8000/api/v1/ads/create` - создание объявления  
   • `title` - string, required, max 200  
