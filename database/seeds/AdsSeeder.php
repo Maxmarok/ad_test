@@ -28,7 +28,8 @@ class AdsSeeder extends Seeder
             $data[] = [
                 'title'         => $faker->sentence(),
                 'price'         => $faker->numberBetween(1, 50000),
-                'photos'        => implode(',', $faker->randomElements($sources, $faker->numberBetween(1, 3))),
+                'photo'         => $faker->randomElement($sources),
+                'photos'        => implode(',', $faker->randomElements($sources, $faker->numberBetween(1, 2))),
                 'description'   => $faker->text(),
                 'created_at'    => now(),
                 'updated_at'    => now(),
