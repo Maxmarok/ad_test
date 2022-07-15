@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,17 @@
 */
 
 Route::get('/', function () {
+    return redirect()->route('list');
+});
+
+Route::get('/list', function () {
+    return view('welcome');
+})->name('list');
+
+Route::get('/item/{id}', function () {
+    return view('welcome');
+})->name('item');
+
+Route::get('/create', function () {
     return view('welcome');
 });

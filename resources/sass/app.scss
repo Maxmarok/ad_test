@@ -1,1 +1,49 @@
-//
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.panel {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+
+    &-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-body {
+        margin: auto;
+    }
+
+    &-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    &-sorting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        > *:not(:last-child) {
+            margin-right: 20px;
+        }
+
+    }
+}
+
+

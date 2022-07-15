@@ -13,4 +13,10 @@ yarn-error.log
 /vendor
 /bootrstrap/cache
 /composer.lock
-/package.lock
+/package-lock.json
+.vscode
+.docker
+public/css/app.css
+public/js/app.js.LICENSE.txt
+public/js/app.js
+public/mix-manifest.json
