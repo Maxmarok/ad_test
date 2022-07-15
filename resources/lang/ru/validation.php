@@ -6,6 +6,7 @@ return [
     'regex' => 'Некорректный формат у поля «:attribute»',
     'string' => 'Поле «:attribute» должно состоять из букв',
     'distinct' => 'Поле «:attribute» не должно дублироваться с другими полями',
+    'numeric' => 'Поле «:attribute» не должно быть больше, чем :max',
 
     'max' => [
         'string' => 'Поле «:attribute» должно быть не больше :max символов',

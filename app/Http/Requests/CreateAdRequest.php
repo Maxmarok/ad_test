@@ -25,7 +25,7 @@ class CreateAdRequest extends FormRequest
     {
         return [
             'title' => 'string|required|max:200',
-            'price' => 'string|required',
+            'price' => 'numeric|required|max:1000000',
             'photos' => 'required|array|distinct|max:3',
             "photos.*"  => [
                 'required',
@@ -37,10 +37,10 @@ class CreateAdRequest extends FormRequest
         ];
     }
 
-    // protected function prepareForValidation()
-    // {
-    //     if($this->request->has('photos')){
-    //         $this->merge(['photos' => implode(',', $this->request->get('photos'))]);
-    //     }
-    // }
+    protected function prepareForValidation()
+    {
+        if($this->request->has('price')){
+            $this->merge(['price' => intval($this->request->get('price'))]);
+        }
+    }
 }

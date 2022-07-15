@@ -42,16 +42,16 @@
 ### Получение данных через запросы к api  
 
 POST `http://localhost:8000/api/v1/ads/list` - получение списка объявлений (пагинация 10 объектов)  
-  • `page`: int  
-  • `order`: `created_at` or `price`  
-  • `sort`: `desc` or `asc`  
+  • `page` - int  
+  • `order` - `created_at` or `price`  
+  • `sort` - `desc` or `asc`  
 
 POST `http://localhost:8000/api/v1/ads/item` - получение конкретного объявления (по ID)  
-  • `id`: int, required  
-  • `fields`: `true` or `false  
+  • `id` - int, required  
+  • `fields` - `true` or `false`  
 
 POST `http://localhost:8000/api/v1/ads/create` - создание объявления  
-  • `title`: string, required  
-  • `price`: string, required  
-  • `description`: string, required  
-  • `photos`: array, required 1 item at least (max items 3)  
+  • `title` - string, required, max 200  
+  • `price` - int, required, max 1000000  
+  • `description` - string, required, max 1000  
+  • `photos` - array, required 1 item at least (max items 3)  
